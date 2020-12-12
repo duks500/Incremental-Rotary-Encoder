@@ -84,8 +84,13 @@ def printVelocity(vel):
     global plottPoint
 
     # plottPoint.write(round(float(vel), 4))
-    plottPoint.write(str(vel))
-    plottPoint.write('\n')
+    if(float(vel) > 0):
+        plottPoint.write(str(vel))
+        plottPoint.write('\n')
+    else:
+        plottPoint.write('0')
+        plottPoint.write('\n')
+
 
 ### a method to calculate the total valecotiy ###
 def totalVelocity():
