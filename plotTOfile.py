@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 from scipy.interpolate import make_interp_spline, BSpline
 import numpy as np
 
-
 plottPoint = open('plottPoint.txt','r') #open the file
 
 contentTXT = 0 #the new list
@@ -14,7 +13,6 @@ listOfVeclocityArray =[] #list of all the diffrence between A and B Array
 
 listOfTotalTime = [] #list of total time
 listOfTotalTimeArray = [] #list of total time Array
-
 
 ### read the text file and save it into a new list and than into an array###
 def saveThePointIntoList():
@@ -45,8 +43,8 @@ def totalTime():
 ### plot x as total second and y as velocity ###
 def plotONGraph():
     totalTime() #calculate the total time and save the points
-
-    global totalSecond, contentTXT, listOfTotalTimeArray, listOfVeclocityArray #global variable
+    
+    global totalSecond, contentTXT, listOfTotalTimeArray, listOfVeclocityArray  #global variable
     #plt.plot(listOfTotalTime,listOfVeclocity) #plot on the graph
 
     ##test##
@@ -56,7 +54,8 @@ def plotONGraph():
     for x in range(len(y_smooth)):
         print(x_smooth[x],y_smooth[x], listOfVeclocityArray[x])
 
-    plt.plot(x_smooth, y_smooth)
+
+    plt.plot(x_smooth, y_smooth, '-gD')
     ##end##
 
 

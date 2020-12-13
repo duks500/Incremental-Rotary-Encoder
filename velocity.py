@@ -104,7 +104,7 @@ def totalVelocity():
         sum += listOfVeclocity[ele]
         plottPointest.write(str(sum))
         plottPointest.write('\n')
-        print(time, sum)
+        #print(time, sum)
 
 
 
